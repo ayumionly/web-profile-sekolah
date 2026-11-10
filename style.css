@@ -1,0 +1,547 @@
+/* =========================
+   RESET & DASAR
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f8fc;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 8%;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+    background: #319f4c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    min-height: 75px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 18px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #e6f72b;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #e6f72b;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    min-height: 90vh;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #e3f2fd,
+        #ffffff
+    );
+}
+
+.hero > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero > div > div:first-child {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    color: #41a95b;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #41a95b;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(34, 185, 59, 0.25);
+    transition: 0.4s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+.hero-button {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #41a95b;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1aec40ba;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    border: 2px solid #1e8f36;
+    color: #1e8f36;
+}
+
+.btn.secondary:hover {
+    background: #1bac3d;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ABOUT / PROFIL
+========================= */
+.about {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    background: white;
+}
+
+.about-image {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(84, 180, 60, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #2bab60;
+    margin-bottom: 12px;
+    margin-top: 25px;
+}
+
+.about-text h2:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Misi */
+.about-text li {
+    margin: 10px 0 10px 20px;
+    color: #555;
+}
+
+
+/* =========================
+   ABOUT CARD
+========================= */
+.about-card {
+    margin-top: 30px;
+    padding: 25px;
+    border-left: 5px solid #299d34;
+    background: #e3f2fd;
+    border-radius: 10px;
+}
+
+.about-card h3 {
+    color: #1cb65f;
+    margin-bottom: 5px;
+}
+
+.about-card p {
+    margin: 0;
+}
+
+
+/* =========================
+   PROGRAM
+========================= */
+.program {
+    background: #f5f8fc;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    color: #2e8e24;
+    margin-bottom: 45px;
+}
+
+.dkv-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.dkv-card,
+.rpl-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.dkv-card:hover,
+.rpl-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(13, 71, 161, 0.2);
+}
+
+.dkv-card img,
+.rpl-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.dkv-card h3,
+.rpl-card h3 {
+    color: #2ac55e;
+    font-size: 21px;
+    margin: 20px 15px 8px;
+}
+
+.dkv-card p,
+.rpl-card p {
+    color: #666;
+}
+
+
+/* =========================
+   GURU
+========================= */
+.guru {
+    background: white;
+}
+
+.guru > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Judul guru */
+.guru > div > div:first-child {
+    grid-column: 1 / -1;
+}
+
+.guru h2 {
+    text-align: center;
+    color: #2c9e4e;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.guru > div > div:not(:first-child) {
+    background: #f5f8fc;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.guru > div > div:not(:first-child):hover {
+    transform: translateY(-8px);
+}
+
+.guru img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 5px solid #31a95d;
+}
+
+.guru h3 {
+    color: #545b57;
+    margin-bottom: 5px;
+}
+
+.guru p {
+    color: #666;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    background: #f5f8fc;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #f1f8f4, #ffffff);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 38px;
+    color: #176b3a;
+    margin-bottom: 45px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Garis di bawah judul */
+.contact h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #2e9d5b;
+    border-radius: 10px;
+    margin: 12px auto 0;
+}
+
+/* Kotak utama */
+.contact > div {
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+/* Efek ketika mouse diarahkan */
+.contact > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Informasi kontak */
+.contact p {
+    margin: 0;
+    color: #444;
+    font-size: 17px;
+    line-height: 2.4;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 60px 5%;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+
+    .contact > div {
+        padding: 30px 25px;
+    }
+
+    .contact p {
+        font-size: 16px;
+        line-height: 2.2;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 480px) {
+
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .contact h2 {
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+
+    .contact h2::after {
+        width: 55px;
+        height: 3px;
+    }
+
+    .contact > div {
+        padding: 25px 18px;
+        border-radius: 15px;
+    }
+
+    .contact p {
+        font-size: 14px;
+        line-height: 2;
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #1d8f49;
+    color: white;
+    padding: 40px 8% 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: rgb(221, 234, 223)
+}
